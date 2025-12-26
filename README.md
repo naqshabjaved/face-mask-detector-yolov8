@@ -143,9 +143,7 @@ Sample inference results generated using the trained model include:
 - Confidence scores rendered on images
 
 See: `artifacts/inference_outputs/`
-## Demo Application (Streamlit)
-
-An interactive **Streamlit web application** is provided for running face mask detection on uploaded images.
+Note: A public demo is intentionally omitted due to compute requirements. The project focuses on production-ready training, inference, CI, and containerization.
 
 ### Demo Features
 - Upload an image via browser
