@@ -35,8 +35,15 @@ jobs:
     - name: Run inference smoke test
       run: |
         python - <<EOF
+        import torch
         from ultralytics import YOLO
+
         model = YOLO("artifacts/yolov8_face_mask/weights/best.pt")
-        results = model("data/processed/images/test/maksssksksss10.png")
-        print("Inference executed successfully")
+
+        # Dummy input tensor (CI-safe, no dataset dependency)
+        dummy_input = torch.zeros(1, 3, 640, 640)
+        results = model(dummy_input)
+
+        print("Inference executed successfully on dummy input")
         EOF
+
