@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environments
+.env
+.venv
+env/
+venv/
+dl_env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Kaggle credentials (CRITICAL)
+.kaggle/
+kaggle.json
+
+# Data (raw and processed)
+data/raw/
+data/processed/
+
+# Model artifacts
+artifacts/
+runs/
+*.pt
+*.onnx
+*.engine
+*.tflite
+
+# Logs
+logs/

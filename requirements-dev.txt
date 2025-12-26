@@ -1,0 +1,7 @@
+ultralytics>=8.1.0
+torch
+torchvision
+opencv-python
+pyyaml
+lxml
+tqdm
