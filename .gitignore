@@ -1,38 +1,67 @@
+# ===============================
 # Python
+# ===============================
 __pycache__/
-*.pyc
+*.py[cod]
 *.pyo
 *.pyd
 
-# Environments
+# ===============================
+# Virtual Environments
+# ===============================
 .env
 .venv
 env/
 venv/
 dl_env/
 
+# ===============================
 # Jupyter
+# ===============================
 .ipynb_checkpoints/
 
-# OS
+# ===============================
+# OS files
+# ===============================
 .DS_Store
 Thumbs.db
 
+# ===============================
 # Kaggle credentials (CRITICAL)
+# ===============================
 .kaggle/
 kaggle.json
 
-# Data (raw and processed)
+# ===============================
+# Data (never commit datasets)
+# ===============================
 data/raw/
 data/processed/
 
-# Model artifacts
-artifacts/
+# ===============================
+# Training runs & caches
+# ===============================
 runs/
-*.pt
+logs/
+*.cache
+*.log
+
+# ===============================
+# Model artifacts (selective)
+# ===============================
+# Ignore all model binaries by default
 *.onnx
 *.engine
 *.tflite
+*.pt
 
-# Logs
-logs/
+# BUT keep the final trained model
+!artifacts/yolov8_face_mask/weights/best.pt
+
+# Ignore optimizer & intermediate weights
+artifacts/**/weights/last.pt
+
+# ===============================
+# Docker / CI noise
+# ===============================
+.dockerignore
