@@ -164,7 +164,7 @@ An interactive **Streamlit web application** is provided for running face mask d
 
 ```bash
 streamlit run src/app/app.py
-
+```
 ---
 
 ## Deployment
@@ -176,7 +176,7 @@ docker build -t face-mask-detector .
 docker run -p 8501:8501 face-mask-detector
 access the application at 
 http://localhost:8501
-
+```
 ## CI/CD
 
 The continuous integration pipeline validates the following:
